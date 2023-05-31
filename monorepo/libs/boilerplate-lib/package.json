@@ -1,0 +1,34 @@
+{
+  "name": "@my-company/boilerplate-lib",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.x.x"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check:format": "prettier --check ./src",
+    "check:lint": "eslint ./src --ext js,jsx,ts,tsx",
+    "clean": "rm -rf dist .turbo tsconfig.tsbuildinfo node_modules",
+    "fix:format": "prettier --write ./src",
+    "fix:lint": "eslint ./src --fix --ext js,jsx,ts,tsx",
+    "tsc:watch": "tsc --watch"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "dependencies": {},
+  "devDependencies": {
+    "@my-company/eslint-plugin-boilerplate": "*",
+    "@my-company/boilerplate-prettier-config": "*",
+    "@types/prettier": "^2.7.0",
+    "eslint": "^8",
+    "prettier": "^2.7.1",
+    "typescript": "^5"
+  },
+  "files": [
+    "dist"
+  ]
+}

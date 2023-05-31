@@ -1,0 +1,8 @@
+{
+  "extends": ["plugin:@my-company/boilerplate/recommended"],
+  "ignorePatterns": ["node_modules/", "/dist", "/build"],
+  "rules": {
+    "no-console": "off",
+    "react-hooks/rules-of-hooks": "off"
+  }
+}

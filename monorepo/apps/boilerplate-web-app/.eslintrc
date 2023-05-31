@@ -1,0 +1,4 @@
+{
+  "extends": ["plugin:@my-company/boilerplate/recommended"],
+  "ignorePatterns": ["node_modules/", "/dist", "/build", "*.generated.*", "__generated__"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@my-company/boilerplate-tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules/ dist/ .turbo/ *.tsbuildinfo"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "dependencies": {}
+}

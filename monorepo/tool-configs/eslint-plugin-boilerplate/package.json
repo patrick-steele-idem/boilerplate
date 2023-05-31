@@ -1,0 +1,24 @@
+{
+  "name": "@my-company/eslint-plugin-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules/ dist/ .turbo/ *.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.1",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  }
+}

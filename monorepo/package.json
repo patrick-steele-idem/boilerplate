@@ -1,0 +1,43 @@
+{
+  "name": "@my-company/boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*",
+    "modules/*",
+    "tool-configs/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "tsc": "turbo run tsc",
+    "clean": "turbo run clean",
+    "clean-all": "turbo run clean && rm -rf node_modules",
+    "check": "turbo run check",
+    "check:lint": "turbo run check:lint",
+    "check:format": "turbo run check:format",
+    "fix": "turbo run fix",
+    "fix:lint": "turbo run fix:lint",
+    "fix:format": "turbo run fix:format",
+    "test": "turbo run test",
+    "generate": "turbo run generate --force",
+    "preview": "npm run preview:demo",
+    "preview:demo": "npm run preview -w apps/demo-app",
+    "release": "turbo run release",
+    "test:coverage": "turbo run test:coverage",
+    "start": "npm start -w apps/boilerplate-app",
+    "start:prod": "npm run preview -w apps/boilerplate-app",
+    "dev": "run-p dev:*",
+    "dev:build": "turbo run tsc:watch --parallel --no-cache",
+    "dev:app": "npm start -w apps/boilerplate-app",
+    "prepare": "generate-dev-cert .ssl/ || echo \"Prepare script failed!\""
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "npm-run-all": "^4.1.5",
+    "turbo": "^1.4.6",
+    "typescript": "^5"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "files": []
+}

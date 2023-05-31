@@ -1,0 +1,37 @@
+{
+  "name": "@my-company/boilerplate-web-app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.x.x"
+  },
+  "private": true,
+  "description": "Boilerplate web app",
+  "type": "module",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:app": "DEV_SERVER_ENABLED=0 vite build",
+    "build:tsc": "tsc",
+    "check:format": "prettier --check ./src",
+    "check:lint": "eslint ./src --ext js,jsx,ts,tsx",
+    "clean": "rm -rf dist dist-assets .turbo tsconfig.tsbuildinfo node_modules src/__generated__",
+    "fix:format": "prettier --write ./src",
+    "fix:lint": "eslint ./src --fix --ext js,jsx,ts,tsx",
+    "preview": "npm run generate && generate-dev-cert .ssl/ && vite build && vite preview",
+    "start": "npm run generate && generate-dev-cert .ssl/ && vite --force --clearScreen false",
+    "start:tb": "npm run generate && generate-dev-cert .ssl/ && vite -c ./vite.tb.config.ts --force --clearScreen false"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "dependencies": {},
+  "devDependencies": {
+    "@my-company/eslint-plugin-boilerplate": "*",
+    "@my-company/boilerplate-prettier-config": "*",
+    "@vitejs/plugin-react": "^2.0.1",
+    "dotenv": "^16.0.0",
+    "eslint": "^8",
+    "typescript": "^5",
+    "vite": "^3"
+  },
+  "files": [
+    "dist"
+  ]
+}

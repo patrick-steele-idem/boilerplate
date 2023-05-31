@@ -1,0 +1,20 @@
+node_modules
+
+build
+__backups__
+.DS_Store
+coverage
+
+# Cloud Desktop + VS Code stuff
+.attach_pid*
+.idea
+.turbo
+
+# ignore ssl certificates
+.ssl
+*.pem
+
+# ignore user-specific .env file
+.env
+/.vscode
+*.tsbuildinfo

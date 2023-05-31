@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build", "generate"]
+    },
+    "check": {
+      "dependsOn": ["check:format", "check:lint"]
+    },
+    "check:format": {},
+    "check:lint": {},
+    "clean": {},
+    "fix": {
+      "dependsOn": ["fix:format", "fix:lint"]
+    },
+    "fix:format": {},
+    "fix:lint": {},
+    "generate": {
+      "dependsOn": ["^build"]
+    },
+    "package-module": {
+      "dependsOn": ["^build", "build"]
+    },
+    "release": {
+      "dependsOn": ["build", "check", "test:coverage", "package-module"]
+    },
+    "test": {
+      "dependsOn": ["^build", "^generate", "generate"]
+    },
+    "test:coverage": {
+      "dependsOn": ["^build", "^generate", "generate"]
+    },
+    "tsc:watch": {
+      "dependsOn": ["^tsc:watch"]
+    }
+  }
+}

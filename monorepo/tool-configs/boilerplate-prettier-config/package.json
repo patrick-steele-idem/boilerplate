@@ -1,0 +1,13 @@
+{
+  "name": "@my-company/boilerplate-prettier-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules/ dist/ .turbo/ *.tsbuildinfo"
+  },
+  "prettier": "@my-company/boilerplate-prettier-config",
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.2.0"
+  }
+}
